@@ -1,0 +1,76 @@
+---
+layout: default
+title-class: work
+---
+
+<script type="application/ld+json">
+  {
+    "@context": "http://schema.org",
+    "@type": "BreadcrumbList",
+    "itemListElement": [{
+      "@type": "ListItem",
+      "position": 1,
+      "item": {
+        "@id": "{{ site.url | append: '/works/' }}",
+        "name": "Works"
+      }
+    },{
+      "@type": "ListItem",
+      "position": 2,
+      "item": {
+        "@id": "{{ site.url | append: page.url }}",
+        "name": "{{ page.title }}",
+        "image": "{{ site.url | append: '/images' | append: page.thumbnail }}"
+      }
+    }]
+  }
+</script>
+
+<div class="work-wrapper">
+
+  <div class="work-info">
+    <section class="work-intro paragraph-normal">{{ page.intro | markdownify }}</section>
+    <aside class="work-details">
+      <div class="work-detail-wrapper">
+
+        {% if page.storytypes %}
+        <div class="work-detail work-detail-6 work-detail-first">
+          <h3 class="title-label">Storytypes</h3>
+          {% assign storytype_list = page.storytypes | split: ','  %}
+
+          {% for storytype in storytype_list %}
+          <span class="keep-line-wrap">{{ storytype }}{% if forloop.last == false %},{% endif %}</span>
+          {% endfor %}
+        </div>
+        {% endif %}
+
+          {% if page.time_period %}
+          <div class="work-detail work-detail-6">
+            <h3 class="title-label">Year</h3>
+            <p>{{ page.time_period }}</p>
+          </div>
+          {% endif %}
+
+        {% if page.website.url %}
+        <div class="work-detail work-detail-12">
+          <a href="{{ page.website.url }}" class="button-secondary">{{ page.website.button_text }}</a>
+        </div>
+        {% endif %}
+      </div>
+    </aside>
+  </div>
+
+  <section>
+  {% for entry in page.content_layout %}
+    {% include layout.html %}
+  {% endfor %}
+  </section>
+
+  {% if page.content %}
+  <section class="additional-content-wrapper">
+    <div class="additional-content">
+      {{ content }}
+    </div>
+  </section>
+  {% endif %}
+</div>

@@ -15,18 +15,19 @@ exclude:
 
 include:
   - _pages
-  - _redirects
+  # - _redirects
 
 # Site settings
 title: Remy J. Alan
-long-title: Remy J. Alan - Gay. Lit. 
+long-title: Remy J. Alan, author
 email: remy.j.alan@gmail.com
-description: "Landing page for Remy J. Alan, author of gay literature."
+description: "Published works and current projects of author, Remy J. Alan"
+# description: "Landing page for Remy J. Alan, author of gay literature."
 baseurl: "" # the subpath of your site, e.g. /blog
-url: "https://remyjalan.com" # the base hostname & protocol for your site
+url: "https://www.remyjalan.com" # the base hostname & protocol for your site
 timezone: America/New_York
 year: 2023
-start-year: 2023
+start-year: 2017
 sitemap: true
 
 # Social networks
@@ -35,6 +36,7 @@ social-username:
   github: "remyauth"
   medium: "@remyauth"
   instagram: "remyauth"
+  mastodon: "remyauth"
   # linkedin: "himatt"
   # pinterest: "mattgreydesign"
   # flickr: "mattgreydesign"
@@ -67,34 +69,44 @@ compress_html: # http://jch.penibelst.de/
 
 # Structure
 navigation:
-  - title: Projects
+  - title: Elemental
     url: /
-  - title: Fonts
-    url: /fonts
+  - title: Works
+    url: /works
+  # - title: News
+  #   url: /news
   - title: About
     url: /about
-  - title: Contact
-    url: /contact
+  # - title: Contact
+  #   url: /contact
 
 permalink: /:title/
 
 # Configure site collections
 collections:
-  projects:
+  elemental: 
     output: true
-    permalink: /projects/:path/
-  fonts:
+    permalink: /elemental/:path/
+  works:
     output: true
-    permalink: /fonts/:path/
+    permalink: /works/:path/
+  # news:
+  #   output: true
+  #   permalink: /news/:path/
 
 defaults:
   - scope:
       path: ""
-      type: "projects"
+      type: "elemental"
     values:
-      layout: "project"
+      layout: "elementbook"
   - scope:
       path: ""
-      type: "fonts"
+      type: "works"
     values:
-      layout: "font"
+      layout: "work"
+  # - scope: 
+  #     path: ""
+  #     type: "news"
+  #   values:
+  #     layout: "news"

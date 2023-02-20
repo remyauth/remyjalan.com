@@ -1,0 +1,16 @@
+<div class="layout layout-{{ page.bookcover.layout }}">
+
+<figure class="image-wrapper {{ page.bookcover.image.positioning }}">
+    <img class="" src="{{ page.bookcover.image.url | prepend: site.image_serve_path }}" alt="{{ page.bookcover.image.description | normalize_whitespace }}">
+    {% if page.bookcover.image.caption %}
+        <figcaption>{{ page.bookcover.image.caption }}</figcaption>
+    {% endif %}
+</figure>
+
+<div class="elementbook-blurb">
+    <div class="elementbook-blurb-wrapper paragraph-normal">
+        {{ page.blurb.content | markdownify }}
+    </div>
+</div>
+
+</div>

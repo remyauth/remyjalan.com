@@ -51,7 +51,7 @@
       .about-tools,
       .about-skills,
       .about-education,
-      .about-experience {
+      .about-publication {
         @include grid-column(6);
 
         @include grid-media(phablet) {
