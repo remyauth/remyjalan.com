@@ -1,0 +1,45 @@
+---
+layout: page
+title_override: Remy J. Alan, author
+redirect_from: /elemental/
+permalink: /
+priority: 1.0
+---
+
+<!-- Quote from FantasyFanatic about Elemental: "The Elemental series by Remy Alan will redefine your expectations of the literary erotica genre ..." -->
+<div class="elemental-intro-wrapper">
+  <p class="elemental-intro type-level-1">
+    Love&nbsp;is&nbsp;<a href="https://www.amazon.com/gp/product/B0BM3XW8DM">Elemental</a>.
+  </p>
+</div>
+
+<div class="elemental-intro-wrapper"><p class="elemental-intro type-level-3">Mike and Luc’s love may not be
+  written as destiny, but they will shake the Heavens and tear the Earth asunder for one another. 
+  Their story is told through the eyes of mere men, each a primitive element like Fire or Water or Spirit — facets of a whole, 
+  teased apart like light bent through a crystal.</p></div>
+
+<div class="elemental">  
+   <!--for elementbook in site.elemental reversed limit:include.limit (to display in time-reversed order)-->
+  {% for elementbook in site.elemental limit:include.limit %}
+  <article class="elementbook-listing">
+    <div class="thumbnail-wrapper">
+      <a href="{{ elementbook.url | prepend: site.baseurl }}">
+        <div class="thumbnail-description-wrapper">
+          <img src="{{ elementbook.thumbnail | prepend: site.image_serve_path }}" alt="{{ elementbook.title }}" width="600" height="450">
+          <p class="thumbnail-description">
+            <span>{{ elementbook.description }}</span>
+          </p>
+        </div>
+        <h3 aria-hidden="true">{{ elementbook.title }}</h3>
+      </a>
+    </div>
+  </article>
+{% endfor %}
+</div>
+
+<!-- <ul class="randomize">
+  <li>Item 0</li>
+  <li>Item 1</li>
+  <li>Item 2</li>
+  <li>Item 3</li>
+</ul> -->

@@ -4,13 +4,13 @@
     "@type": "WebSite",
     "name": "{{ site.title }}",
     "alternateName": "{{ site.long-title }}",
-    "url": "http://www.himatt.com"
+    "url": "http://www.remyjalan.com"
   }
   {
     "@context": "http://schema.org",
     "@type": "Organization",
-    "url": "http://www.himatt.com",
-    "logo": "http://www.himatt.com/images/mg-logo.png"
+    "url": "http://www.remyjalan.com",
+    "logo": "https://www.remyjalan.com/"
   }
 </script>
 
@@ -22,7 +22,7 @@
     <div class="logo-nav-wrapper">
       <div class="logo-title-wrapper">
         <div class="logo">
-          <a href="{{ site.baseurl }}/" aria-label="Homepage, Matt Grey Design">
+          <a href="{{ site.baseurl }}/" aria-label="Remy J. Alan, author">
             {% include logo.svg %}
           </a>
         </div>
@@ -34,7 +34,8 @@
           <ul class="mobile-dropdown" itemscope itemtype="http://schema.org/SiteNavigationElement">
           {% for link in site.navigation %}
             {% assign current = nil %}
-            {% capture current_page %}{{ page.url | downcase | replace_first: '/', '' | remove: '/' }}{% if page.url == '/' %}projects{% endif %}{% endcapture %}
+            <!-- After futzing with yaml redirect headers for an hour, I've learned the following line seems to help manage the 'root' site-name selection, or something -->
+            {% capture current_page %}{{ page.url | downcase | replace_first: '/', '' | remove: '/' }}{% if page.url == '/' %}elemental{% endif %}{% endcapture %}
             {% capture current_page_nav %}{{ link.title | downcase }}{% endcapture %}
 
             {% if current_page contains current_page_nav %}

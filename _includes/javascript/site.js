@@ -1,5 +1,6 @@
 {% include /javascript/menu.js %}
 {% include /javascript/headspace.js %}
+{% include /javascript/randomize.js %}
 
 $(function () {
   Headspace(document.querySelector('[data-header]'), {

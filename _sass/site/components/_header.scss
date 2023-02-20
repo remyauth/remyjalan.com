@@ -60,8 +60,10 @@
       vertical-align: top;
       display: inline-block;
       margin-right: .6em;
-      width: rem(48px);
-      height: rem(48px);
+      // width: rem(48px);
+      // height: rem(48px);
+      width: rem(172px); // These values define the logo's size in the upper-left corner
+      height: rem(42px);
 
       a {
         &:focus,

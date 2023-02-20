@@ -1,0 +1,32 @@
+---
+layout: page
+title_override: Remy J. Alan, author
+permalink: /works/
+redirect_from: 
+priority: 0.9
+---
+
+<div class="works-intro-wrapper">
+  <p class="works-intro type-level-1">Remy&nbsp;J.&nbsp;Alan is an author of gay&nbsp;literature.</p>
+</div>
+
+<div class="works-intro-wrapper"><p class="works-intro type-level-3"><a href="/contact">Get in touch</a> if you like my work.</p></div>
+
+<div class="works">  
+   <!--for work in site.works reversed limit:include.limit (to display in time-reversed order)-->
+  {% for work in site.works limit:include.limit %}
+  <article class="work-listing">
+    <div class="thumbnail-wrapper">
+      <a href="{{ work.url | prepend: site.baseurl }}">
+        <div class="thumbnail-description-wrapper">
+          <img src="{{ work.thumbnail | prepend: site.image_serve_path }}" alt="{{ work.title }}" width="600" height="450">
+          <p class="thumbnail-description">
+            <span>{{ work.description }}</span>
+          </p>
+        </div>
+        <h3 aria-hidden="true">{{ work.title }}</h3>
+      </a>
+    </div>
+  </article>
+{% endfor %}
+</div>

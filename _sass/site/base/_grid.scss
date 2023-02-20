@@ -4,12 +4,14 @@
   grid-auto-rows: auto;
   grid-column-gap: var(--gutter);
   grid-row-gap: var(--gutter-row);
+  // border: 1px solid tomato
 }
 
 @mixin grid-container {
   @include grid-base;
   margin-left: var(--page-margin);
   margin-right: var(--page-margin);
+  
 
   @include grid-media(tablet) {
     grid-template-columns: repeat(12, 1fr);
@@ -46,4 +48,5 @@
 
 @mixin grid-column($spanAmount: 12) {
   grid-column-end: span $spanAmount;
+  // grid-column-end: auto
 }
