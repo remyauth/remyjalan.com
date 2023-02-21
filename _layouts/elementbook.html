@@ -26,95 +26,6 @@ title-class: elementbook
   } 
 </script>
 
-<section class="grid-container-jac">
-  <!-- bookcover -->
-  <div class="grid-item grid-item-1">
-      <figure class="image-wrapper">
-          <img class="" src="{{ page.bookcover.image.url | prepend: site.image_serve_path }}" alt="{{ page.bookcover.image.description | normalize_whitespace }}">
-      </figure>
-    </div>
-
-  <!-- blurb -->
-  <div class="grid-item elementbook-blurb-wrapper paragraph-normal">
-    {{ page.blurb.content | markdownify }}
-  </div>
-
-  <!-- book details -->
-  <div class="grid-item grid-item-3">
-    <div class="elementbook-info">
-    
-      <div class="elementbook-details">
-  
-        <div class="elementbook-detail-wrapper">
-          {% if page.storytypes %}
-          <div class="elementbook-detail elementbook-detail-6 elementbook-detail-first">
-            <h3 class="title-label">Story types</h3>
-            {% assign storytype_list = page.storytypes | split: ','  %}
-  
-            {% for storytype in storytype_list %}
-              <span class="keep-line-wrap">{{ storytype }}{% if forloop.last == false %},{% endif %}</span>
-            {% endfor %}
-          </div>
-          {% endif %}
-          <br/>
-            {% if page.time_period %}
-            <div class="elementbook-detail elementbook-detail-6">
-              <h3 class="title-label">Year</h3>
-              <p>{{ page.time_period }}</p>
-            </div>
-            {% endif %}
-            <br/>
-          {% if page.website.url %}
-          <div class="elementbook-detail elementbook-detail-12">
-            <a href="{{ page.website.url }}" class="button-secondary">{{ page.website.button_text }}</a>
-          </div>
-          {% endif %}
-        </div>
-      </div>
-   </div>
-  </div>
-
-  <!-- book quotes  -->
-  <div class="grid-item grid-item-4">
-    {% if page.bookquotes %}
-    <div class="elementbook-detail elementbook-detail-6 elementbook-detail-first">
-      <h3 class="title-label">Book quotes</h3>      
-      {% assign bookquote_list = page.bookquotes %}
-      <!-- {% assign x = 'abc' %}
-      {% assign y = 'def' %}
-      {% assign z = x | append: ' - ' | append: y %}
-      {{ z }} -->
-      {% for bookquote in bookquote_list %}
-      <!-- <span class="keep-line-wrap">{{ bookquote.quote | markdownify }}&rdquo;</span>       -->
-      <span class="keep-line-wrap"><blockquote>{{ bookquote.quote | markdownify }}</blockquote>{% if forloop.last == false %}<br/>{% endif %}</span>      
-      {% endfor %}
-    </div>
-    {% endif %}
-  </div>
-
-  <!-- empty space  -->
-  <div class="grid-item grid-item-5"></div>
-
-  <!-- testimonials  -->
-  <div class="grid-item grid-item-6">
-    {% if page.testimonials %}
-    <div class="elementbook-detail elementbook-detail-6 elementbook-detail-first">
-      <h3 class="title-label">Reviews</h3>      
-      {% assign testimonial_list = page.testimonials %}
-
-      {% for testimonial in testimonial_list %}
-      <span class="keep-line-wrap">
-        <blockquote>
-          {{ testimonial.quote | markdownify | append: ' —' | append: testimonial.source }}
-        </blockquote>
-        {% if forloop.last == false %}<br/>{% endif %}</span>      
-      {% endfor %}
-    </div>
-    {% endif %}
-  </div>
-</section>
-
-
 <div class="elementbook-wrapper">
 
   <!-- <section>
@@ -123,7 +34,7 @@ title-class: elementbook
     {% endfor %}
   </section> -->
 
-  <section class="layout-2col">
+  <section class="layout-3col">
     
     <!-- <div class="layout-2col"> -->
       <figure class="image-wrapper">
@@ -135,12 +46,7 @@ title-class: elementbook
     <!-- </div> -->
       <div class="elementbook-blurb-wrapper paragraph-normal">
         {{ page.blurb.content | markdownify }}
-      </div>
-
-    
-
-      
-      
+      </div>    
     
   </section>
 
@@ -174,6 +80,24 @@ title-class: elementbook
         {% endif %}
       </div>
     </div>
+      <section>
+        {% if page.bookquotes %}
+        <div class="elementbook-detail-wrapper elementbook-info-quotes paragraph-normal">
+          <h3 class="title-label">Book quotes</h3>      
+          {% assign bookquote_list = page.bookquotes %}
+          <!-- {% assign x = 'abc' %}
+          {% assign y = 'def' %}
+          {% assign z = x | append: ' - ' | append: y %}
+          {{ z }} -->
+          {% for bookquote in bookquote_list %}
+          <!-- <span class="keep-line-wrap">{{ bookquote.quote | markdownify }}&rdquo;</span>       -->
+          <span class="keep-line-wrap"><blockquote>{{ bookquote.quote | markdownify }}</blockquote>{% if forloop.last == false %}<br/>{% endif %}</span>      
+          {% endfor %}
+        </div>
+        {% endif %}
+      </section>
+
+
   </div>
 
 
