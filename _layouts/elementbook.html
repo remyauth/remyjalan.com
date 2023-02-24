@@ -85,10 +85,7 @@ title-class: elementbook
         <div class="elementbook-detail-wrapper elementbook-info-quotes paragraph-normal">
           <h3 class="title-label">Book quotes</h3>      
           {% assign bookquote_list = page.bookquotes %}
-          <!-- {% assign x = 'abc' %}
-          {% assign y = 'def' %}
-          {% assign z = x | append: ' - ' | append: y %}
-          {{ z }} -->
+ 
           {% for bookquote in bookquote_list %}
           <!-- <span class="keep-line-wrap">{{ bookquote.quote | markdownify }}&rdquo;</span>       -->
           <span class="keep-line-wrap"><blockquote>{{ bookquote.quote | markdownify }}</blockquote>{% if forloop.last == false %}<br/>{% endif %}</span>      
@@ -100,41 +97,36 @@ title-class: elementbook
 
   </div>
 
+<div class=randomize>
+  {% assign bookquote_list = page.bookquotes %}
 
-
-  <section>
-    {% if page.bookquotes %}
-    <div class="elementbook-detail elementbook-detail-6 elementbook-detail-first">
-      <h3 class="title-label">Book quotes</h3>      
-      {% assign bookquote_list = page.bookquotes %}
-      <!-- {% assign x = 'abc' %}
-      {% assign y = 'def' %}
-      {% assign z = x | append: ' - ' | append: y %}
-      {{ z }} -->
-      {% for bookquote in bookquote_list %}
-      <!-- <span class="keep-line-wrap">{{ bookquote.quote | markdownify }}&rdquo;</span>       -->
-      <span class="keep-line-wrap"><blockquote>{{ bookquote.quote | markdownify }}</blockquote>{% if forloop.last == false %}<br/>{% endif %}</span>      
-      {% endfor %}
-    </div>
+<div class="blockquote randomize">
+  <p>poop</p>
+  {{ bookquote.quote[1] | markdownify }}
+</div>
+  <!-- {% for bookquote in bookquote_list %}
+  <span class="keep-line-wrap">
+    {% if forloop.first == true %}
+    <blockquote>
+      {{ bookquote.quote | markdownify }}
+    </blockquote>
+    {% endif %
+    }
+    {% if forloop.last == false %}
+      <br/>
     {% endif %}
-  </section>
+  </span>
+  {% endfor %} -->
 
-  <section>
-    {% if page.testimonials %}
-    <div class="elementbook-detail elementbook-detail-6 elementbook-detail-first">
-      <h3 class="title-label">Reviews</h3>      
-      {% assign testimonial_list = page.testimonials %}
+</div>
 
-      {% for testimonial in testimonial_list %}
-      <span class="keep-line-wrap">
-        <blockquote>
-          {{ testimonial.quote | markdownify | append: ' —' | append: testimonial.source }}
-        </blockquote>
-        {% if forloop.last == false %}<br/>{% endif %}</span>      
-      {% endfor %}
-    </div>
-    {% endif %}
-  </section>
+  <!-- <ul class="randomize">
+    <li>Item 0</li>
+    <li>Item 1</li>
+    <li>Item 2</li>
+    <li>Item 3</li>
+  </ul> -->
+
 
   <!-- {% if page.content %}
   <section class="additional-content-wrapper">
