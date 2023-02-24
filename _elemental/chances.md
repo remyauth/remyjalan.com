@@ -13,16 +13,17 @@ time_period: 2022
 thumbnail: "/elemental/chances/plist-chances.jpg"
 highlight_color: 7087A6
 
-content_layout:
-  - section_layout: 4col
-    images:
-      - caption: 
-        description: 'Navigation'
-        url: '/elemental/chances/plist-chances.jpg'
-        width: 
-        height: 
+bookcover:
+  layout: 4col
+  image:
+    caption: 
+    description: 'Book cover for Chances'
+    url: '/elemental/chances/plist-chances.jpg'
+    width: 
+    height: 
 
-  - section_layout: blurb
+  blurb:
+    layout: blurb
     content: |
       Soulmates Thom and Chance make a connection during their senior year of high school, but two weeks before graduation, Thom suffers an unimaginable loss when Chance dies in a car accident. Chance’s death does more than ruin Thom’s life—it breaks his spirit. Devastated, he runs away.
 
@@ -36,7 +37,6 @@ content_layout:
 website:
   button_text: Find on Amazon
   url: https://www.amazon.com/dp/B0BM4NSKXN
-
 
 
 bookquotes: 

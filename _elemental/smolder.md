@@ -30,20 +30,6 @@ blurb:
       As the years pass, the Family’s religious indoctrination chips away at Mike’s abundant love for Luc. During their struggle, tragedy strikes, branding Mike’s heart and soul until his ritual is all that remains. However, a mysterious letter interrupts this year’s pilgrimage and offers him redemption. Can he accept it before the Family extinguishes his final, smoldering ember?
 
 
-content_layout:
-  - section_layout: 4col
-    images:
-      - caption: 
-        description: 'Book cover for Smolder'
-        url: '/elemental/smolder/plist-smolder.jpg'
-        width: 
-        height: 
-  - section_layout: blurb
-    content: |
-      Haunted by denial, Mike returns annually to the hotel where he first connected with Luc, an enigmatic ex-member of the Family. Luc’s confident masculinity and tenderness sparks feelings in Mike that he’d never before indulged–falling in love became as inevitable as gravity.
-
-      As the years pass, the Family’s religious indoctrination chips away at Mike’s abundant love for Luc. During their struggle, tragedy strikes, branding Mike’s heart and soul until his ritual is all that remains. However, a mysterious letter interrupts this year’s pilgrimage and offers him redemption. Can he accept it before the Family extinguishes his final, smoldering ember?
-
 website:
   button_text: Find on Amazon
   url: https://www.amazon.com/gp/product/B075Z4PQKN
@@ -79,9 +65,6 @@ testimonials:
   - id: 4
     quote: The author was a step ahead of me at all times.
     source: Marshall von Trent
-
-
-
 
 
 
