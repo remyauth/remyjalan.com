@@ -11,7 +11,7 @@ ownership:
 client: 
 time_period: 2017
 thumbnail: "/elemental/smolder/plist-smolder.jpg"
-highlight_color: 8e1a1d
+highlight_color: bb3d47
 
 bookcover:
   layout: 4col

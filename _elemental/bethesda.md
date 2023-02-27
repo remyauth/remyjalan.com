@@ -13,27 +13,29 @@ time_period: 2019
 thumbnail: "/elemental/bethesda/plist-bethesda.jpg"
 highlight_color: c1abad
 
-content_layout:
-  - section_layout: 4col
-    images:
-      - caption: 
-        description: 'Navigation'
-        url: '/elemental/bethesda/plist-bethesda.jpg'
-        width: 
-        height: 
-  - section_layout: blurb
-    content: |
-        From the outside looking in, John leads a boring life by day as a professor at a small liberal arts school in San Francisco. His nights are saucy, sinful even, when he services clients as a sex worker. He’s damned good at it, too, for reasons far surpassing simple technique, whether he’s entertaining super-hunky coeds or fulfilling the fantasies of married men on the down-low.
+bookcover:
+  layout: 4col
+  image:
+    caption: 
+    description: 'Book cover for Bethesda'
+    url: '/elemental/bethesda/plist-bethesda.jpg'
+    width: 
+    height: 
 
-        Because John has a secret.
+blurb:
+  layout: blurb
+  content: |
+      From the outside looking in, John leads a boring life by day as a professor at a small liberal arts school in San Francisco. His nights are saucy, sinful even, when he services clients as a sex worker. He’s damned good at it, too, for reasons far surpassing simple technique, whether he’s entertaining super-hunky coeds or fulfilling the fantasies of married men on the down-low.
 
-        It’s not that he’s thirty-five and feeling washed-up or that he’s got a crush on one of his clients.
+      Because John has a secret.
 
-        His secret could be he’s buried his rural, Southern roots, or that Paul, his first lover and preacher from back home, still preoccupies his thoughts. Maybe it’s the terrors he faced in conversion therapy as a teenager…but it’s none of those things.
+      It’s not that he’s thirty-five and feeling washed-up or that he’s got a crush on one of his clients.
 
-        John’s secret is the Fountain, a mysterious well of energy within him he cannot control.
+      His secret could be he’s buried his rural, Southern roots, or that Paul, his first lover and preacher from back home, still preoccupies his thoughts. Maybe it’s the terrors he faced in conversion therapy as a teenager…but it’s none of those things.
 
-        Paul knows about the Fountain. So do John’s parents. Despite their best efforts to protect their dogma, it will all come out now that Paul has called John home to Georgia. To Bethesda. 
+      John’s secret is the Fountain, a mysterious well of energy within him he cannot control.
+
+      Paul knows about the Fountain. So do John’s parents. Despite their best efforts to protect their dogma, it will all come out now that Paul has called John home to Georgia. To Bethesda. 
         
 website:
   button_text: Find on Amazon

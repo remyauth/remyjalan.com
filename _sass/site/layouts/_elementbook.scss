@@ -1,5 +1,38 @@
 .elementbook-wrapper {
 
+  .elementbook-testimonial {
+    @include grid-column-from-to(3,10);
+
+      @include grid-media(tablet) {
+        @include grid-column-from-to(3,10);
+      }
+
+      @include grid-media(desktop) {
+        @include grid-column-from-to(3,10);
+        // @include grid-column-from-to(2,8);
+      }   
+      
+  }
+
+  // .elementbook-testimonial {
+  //   border: tomato;
+  // }
+  
+  .elementbook-testimonial-quote {    
+    //color: {{ page.highlight_color }};
+    font-size: 1.2rem;
+    font-style: italic;
+    color: #bb3d47;
+  }
+
+  .elementbook-testimonial-source {
+    //color: {{ page.highlight_color }};
+    font-size: 1.2rem;
+    font-weight: 900;
+    text-align: right; 
+    color: #bb3d27;
+  }
+  
   //Layout
   .elementbook-info {
     @extend .grid-container;

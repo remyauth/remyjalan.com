@@ -22,16 +22,16 @@ bookcover:
     width: 
     height: 
 
-  blurb:
-    layout: blurb
-    content: |
-      Soulmates Thom and Chance make a connection during their senior year of high school, but two weeks before graduation, Thom suffers an unimaginable loss when Chance dies in a car accident. Chance’s death does more than ruin Thom’s life—it breaks his spirit. Devastated, he runs away.
+blurb:
+  layout: blurb
+  content: |
+    Soulmates Thom and Chance make a connection during their senior year of high school, but two weeks before graduation, Thom suffers an unimaginable loss when Chance dies in a car accident. Chance’s death does more than ruin Thom’s life—it breaks his spirit. Devastated, he runs away.
 
-      After years of drifting in and out of meaningless flings, Thom returns to his failing hometown during the holiday season, a wealthy man hell-bent on tearing everything down. As his old school collapses before him, satisfaction courses through his veins, but it’s short-lived when he catches the eye of a handsome stranger in the dilapidated neighborhood bar.
+    After years of drifting in and out of meaningless flings, Thom returns to his failing hometown during the holiday season, a wealthy man hell-bent on tearing everything down. As his old school collapses before him, satisfaction courses through his veins, but it’s short-lived when he catches the eye of a handsome stranger in the dilapidated neighborhood bar.
 
-      There’s something familiar about the man’s looks, corn-fed humor, and charming personality that Thom can’t put his finger on. What should have been an anonymous hook-up turns unbelievable when the stranger claims to be his long-dead soulmate. 
+    There’s something familiar about the man’s looks, corn-fed humor, and charming personality that Thom can’t put his finger on. What should have been an anonymous hook-up turns unbelievable when the stranger claims to be his long-dead soulmate. 
 
-      To complicate matters further, the more Thom digs, the more improbable his life becomes. The hot encounters, a secret legacy, and a family dinner with relatives he’d disowned all conspire to give him a second Chance at love, but will a mixed-up kid and crazy church-lady wreck Thom’s new lease on life?
+    To complicate matters further, the more Thom digs, the more improbable his life becomes. The hot encounters, a secret legacy, and a family dinner with relatives he’d disowned all conspire to give him a second Chance at love, but will a mixed-up kid and crazy church-lady wreck Thom’s new lease on life?
 
 
 website:

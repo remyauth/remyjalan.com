@@ -26,6 +26,9 @@ title-class: elementbook
   } 
 </script>
 
+
+
+
 <div class="elementbook-wrapper">
 
   <!-- <section>
@@ -34,26 +37,27 @@ title-class: elementbook
     {% endfor %}
   </section> -->
 
-  <section class="layout-3col">
-    
-    <!-- <div class="layout-2col"> -->
-      <figure class="image-wrapper">
-          <img class="" src="{{ page.bookcover.image.url | prepend: site.image_serve_path }}" alt="{{ page.bookcover.image.description | normalize_whitespace }}">
-      </figure>
-      <!-- <figure class="image-wrapper {{ page.bookcover.image.positioning }}">
+
+ <section class="layout-3col">
+
+  <!-- Testimonial quotes, randomized and put on top of the page (beneath the header). -->
+  <section class="elementbook-testimonial">
+    <div id="tquote" class="elementbook-testimonial-quote"></div>
+    <div id="tsource" class="elementbook-testimonial-source"></div>
+  </section>
+
+    <figure class="image-wrapper">
         <img class="" src="{{ page.bookcover.image.url | prepend: site.image_serve_path }}" alt="{{ page.bookcover.image.description | normalize_whitespace }}">
-      </figure> -->
-    <!-- </div> -->
-      <div class="elementbook-blurb-wrapper paragraph-normal">
-        {{ page.blurb.content | markdownify }}
-      </div>    
+    </figure>
+
+    <div class="elementbook-blurb-wrapper paragraph-normal">
+      {{ page.blurb.content | markdownify }}
+    </div>    
     
   </section>
 
-  <div class="elementbook-info">
-    
+  <div class="elementbook-info">    
     <div class="elementbook-details">
-
       <div class="elementbook-detail-wrapper">
         {% if page.storytypes %}
         <div class="elementbook-detail elementbook-detail-6 elementbook-detail-first">
@@ -80,45 +84,23 @@ title-class: elementbook
         {% endif %}
       </div>
     </div>
-      <section>
-        {% if page.bookquotes %}
-        <div class="elementbook-detail-wrapper elementbook-info-quotes paragraph-normal">
-          <h3 class="title-label">Book quotes</h3>      
-          {% assign bookquote_list = page.bookquotes %}
- 
-          {% for bookquote in bookquote_list %}
-          <!-- <span class="keep-line-wrap">{{ bookquote.quote | markdownify }}&rdquo;</span>       -->
-          <span class="keep-line-wrap"><blockquote>{{ bookquote.quote | markdownify }}</blockquote>{% if forloop.last == false %}<br/>{% endif %}</span>      
-          {% endfor %}
-        </div>
-        {% endif %}
-      </section>
-
-
   </div>
 
-<div class=randomize>
-  {% assign bookquote_list = page.bookquotes %}
+  <h3 id="bquote"></h3><br/>
 
-<div class="blockquote randomize">
-  <p>poop</p>
-  {{ bookquote.quote[1] | markdownify }}
-</div>
-  <!-- {% for bookquote in bookquote_list %}
-  <span class="keep-line-wrap">
-    {% if forloop.first == true %}
-    <blockquote>
-      {{ bookquote.quote | markdownify }}
-    </blockquote>
-    {% endif %
-    }
-    {% if forloop.last == false %}
-      <br/>
+    <!-- <section>
+    {% if page.bookquotes %}
+    <div class="elementbook-detail-wrapper elementbook-info-quotes paragraph-normal">
+      <h3 class="title-label">Book quotes</h3>      
+      {% assign bookquote_list = page.bookquotes %}
+
+      {% for bookquote in bookquote_list %}
+      <span class="keep-line-wrap"><blockquote>{{ bookquote.quote | markdownify }}</blockquote>{% if forloop.last == false %}<br/>{% endif %}</span>      
+      {% endfor %}
+    </div>
     {% endif %}
-  </span>
-  {% endfor %} -->
+  </section> -->
 
-</div>
 
   <!-- <ul class="randomize">
     <li>Item 0</li>
@@ -127,12 +109,45 @@ title-class: elementbook
     <li>Item 3</li>
   </ul> -->
 
-
-  <!-- {% if page.content %}
-  <section class="additional-content-wrapper">
-    <div class="additional-content">
-      {{ content }}
-    </div>
-  </section>
-  {% endif %} -->
+  
 </div>
+
+<script>
+  function getRandomItem(array) {
+    var randomIndex = Math.floor(Math.random() * array.length);
+    return array[randomIndex];
+  }
+</script>
+
+<!--Convert quotes from book and review testimonials as JSON data for randomization -->
+
+<!-- No comments or empty lines allowed in this script; I don't know why. -->
+<script>
+  var BookQuotes = {{ page.bookquotes | jsonify }};
+  var randomBookQuoteObject = getRandomItem(BookQuotes);
+  var randomBookQuote = randomBookQuoteObject.quote;
+  var bQuoteElement = document.getElementById("bquote");
+  bQuoteElement.innerHTML = randomBookQuote;
+</script>
+
+<!--   
+  Line-by-line comments for below script:
+  1. Use liquid to pull all the testimonials from markdown file. 
+  2. Select one random testimonial object
+  3. Pull the quote from the testimonial
+  4. Assign the quote to the right html element
+  5. Send the quote text to the html element
+  6. Pull the "quotee/speaker/source" of the testimonial element
+  7. Assign the speaker to the right html element
+  8. Send the speaker text to the html element
+-->
+<script>
+  var Testimonials = {{ page.testimonials | jsonify }};
+  var randomTestimonialObject = getRandomItem(Testimonials);
+  var randomQuote = randomTestimonialObject.quote;
+  var tQuoteElement = document.getElementById("tquote");
+  tQuoteElement.innerHTML = randomQuote;
+  var randomSource = randomTestimonialObject.source;
+  var tSourceElement = document.getElementById("tsource");
+  tSourceElement.innerHTML = randomSource;
+</script>
