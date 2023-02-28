@@ -56,15 +56,23 @@ testimonials:
   - id: 1
     quote: I wasn't sure what to expect when I started reading this book, but it completely exceeded anything I would have possibly imagined.
     source: FantasyFanatic
+    bonafide: Amazon Reviewer
   - id: 2
     quote: A wonderful short read.
     source: Philip Keane
+    bonafide: Amazon Reviewer
   - id: 3
     quote: Smolder is erotica at its best—beautifully written, rich in human emotion, super hot, and with a fantastic twist.
     source: Artsy Poets
+    bonafide: Amazon Reviewer
   - id: 4
     quote: The author was a step ahead of me at all times.
     source: Marshall von Trent
+    bonafide: Amazon Reviewer
+  - id: 5
+    quote: Smolder does just that — it reads as a slow burn, carefully crafted to develop intrigue and tension before eventually igniting and blowing your mind. More than simply gay erotica, it elevates the genre, metamorphosing into literature of unquantifiable beauty.
+    source: Phillip M. Locey
+    bonafide: Author of _Shiver the Moon_
 
 
 

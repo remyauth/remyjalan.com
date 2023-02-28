@@ -1,5 +1,11 @@
 .elementbook-wrapper {
 
+  .book-title {
+    @include grid-column(12);    
+    margin-top: 4rem;
+    font-size: 60px;
+  }
+
   .elementbook-testimonial {
     @include grid-column-from-to(3,10);
 
@@ -32,7 +38,15 @@
     text-align: right; 
     color: #bb3d27;
   }
-  
+
+  .elementbook-testimonial-bonafide {
+    //color: {{ page.highlight_color }};
+    font-size: 1.2rem;
+    font-weight: 900;
+    text-align: right; 
+    color: #bb3d27;
+  }
+
   //Layout
   .elementbook-info {
     @extend .grid-container;

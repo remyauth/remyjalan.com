@@ -37,13 +37,15 @@ title-class: elementbook
     {% endfor %}
   </section> -->
 
-
  <section class="layout-3col">
+
+  <div class="book-title">  {{ page.title }}  </div>
 
   <!-- Testimonial quotes, randomized and put on top of the page (beneath the header). -->
   <section class="elementbook-testimonial">
     <div id="tquote" class="elementbook-testimonial-quote"></div>
     <div id="tsource" class="elementbook-testimonial-source"></div>
+    <div id="tbonafide" class="elementbook-testimonial-bonafide"></div>
   </section>
 
     <figure class="image-wrapper">
@@ -150,4 +152,7 @@ title-class: elementbook
   var randomSource = randomTestimonialObject.source;
   var tSourceElement = document.getElementById("tsource");
   tSourceElement.innerHTML = randomSource;
+  var randomBonaFide = randomTestimonialObject.bonafide;
+  var tBonafideElement = document.getElementById("tbonafide");
+  tSourceElement.innerHTML = randomBonafide;
 </script>
