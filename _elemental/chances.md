@@ -57,9 +57,11 @@ testimonials:
   - id: 1
     quote: I don't know of any other writers successfully doing what Remy Alan manages to accomplish consistently— blending eroticism with complex, original storytelling that's powerful to get noticed in any genre.
     source: FantasyFanatic
+    bonafide: Amazon Review
   - id: 2
     quote: You can’t help but want to read more.
     source: Megan
+    bonafide: Amazon Review
 
 
 

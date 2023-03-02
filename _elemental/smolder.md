@@ -72,7 +72,7 @@ testimonials:
   - id: 5
     quote: Smolder does just that — it reads as a slow burn, carefully crafted to develop intrigue and tension before eventually igniting and blowing your mind. More than simply gay erotica, it elevates the genre, metamorphosing into literature of unquantifiable beauty.
     source: Phillip M. Locey
-    bonafide: Author of _Shiver the Moon_
+    bonafide: Author of <i>Shiver the Moon</i>
 
 
 

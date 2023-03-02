@@ -59,18 +59,18 @@ testimonials:
   - id: 1
     quote: An amazing second book from Remy J Alan! Truly, unlike anything I have ever read
     source: Rob
+    bonafide: Amazon Review
   - id: 2
     quote: ...a wonderful second book!
     source: Megan
+    bonafide: Amazon Review
   - id: 3
     quote: Subtle hints of the supernatural permeate this expertly crafted narrative
     source: FantasyFanatic
+    bonafide: Amazon Review
   - id: 4
     quote: Sexuality and religion clash in this fabulous tale. Intense and unpredictable, the story races to a powerful ending which lingers in the mind. A must read!
     source: Marshall von Trent
-
-
-
-
+    bonafide: Amazon Review
 
 ---
