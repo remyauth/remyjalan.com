@@ -1,0 +1,82 @@
+
+figure.testimony {
+  // font-family: 'Raleway', Arial, sans-serif;
+  display: grid;
+  justify-content: center;
+  position: relative;
+  overflow: hidden;
+  margin: 10px;
+  margin-top: 100px;
+  min-width: 30%;
+  max-width: 60%;
+  width: 100%;
+  color: #fff;
+  text-align: left;
+  box-shadow: none !important;
+}
+
+figure.testimony * {
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+}
+
+figure.testimony blockquote {
+  margin: 0;
+  display: block;
+  border-radius: 8px;
+  position: relative;
+  background-color: #333333;
+  padding: 30px 50px 70px 50px;
+  font-size: 1.8rem;
+  font-weight: 500;
+  margin: 0 0 -13px;
+  line-height: 1.6em;
+  box-shadow: 0 0 5px rgba(0, 0, 0, 0.15);
+}
+
+figure.testimony blockquote:before,
+figure.testimony blockquote:after {
+  font-family: 'FontAwesome';
+  content: "\201C";
+  position: absolute;
+  font-size: 50px;
+  color: #bb3d47;
+  opacity: 1;
+  font-style: normal;
+}
+
+figure.testimony blockquote:before {
+  top: 35px;
+  left: 20px;
+}
+
+figure.testimony blockquote:after {
+  content: "\201D";
+  right: 20px;
+  bottom: 35px;
+}
+
+figure.testimony .author {
+  margin: 0;
+  text-transform: uppercase;
+  font-size: x-large;
+  text-align: center;
+  color: #ffffff;
+}
+
+figure.testimony .author h5 {
+  background: #bb3d47;
+  opacity: 0.8;
+  margin: 0;
+  font-weight: 800;
+}
+
+figure.testimony .author h5 span {
+  font-weight: 500;
+  text-transform: none;
+  display: block;
+}
+/* Demo purposes only */
+// body {
+//   background-color: #212121;
+// }

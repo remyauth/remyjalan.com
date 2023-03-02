@@ -26,9 +26,6 @@ title-class: elementbook
   } 
 </script>
 
-
-
-
 <div class="elementbook-wrapper">
 
   <!-- <section>
@@ -36,18 +33,21 @@ title-class: elementbook
       {% include layout.html %}
     {% endfor %}
   </section> -->
+  <figure class="testimony">
+    <blockquote> <div id="tquote"></div> </blockquote>
+    <div class="author">
+      <h5> <div id="tsource"></div> <span> <div id="tbonafide"></div> </span></h5>
+    </div>
+  </figure>
+  <section class="layout-3col">
 
- <section class="layout-3col">
 
+  
   <div class="book-title">  {{ page.title }}  </div>
 
   <!-- Testimonial quotes, randomized and put on top of the page (beneath the header). -->
-  <section class="elementbook-testimonial">
-    <div id="tquote" class="elementbook-testimonial-quote"></div>
-    <div id="tsource" class="elementbook-testimonial-source"></div>
-    <div id="tbonafide" class="elementbook-testimonial-bonafide"></div>
-  </section>
-
+   
+   
     <figure class="image-wrapper">
         <img class="" src="{{ page.bookcover.image.url | prepend: site.image_serve_path }}" alt="{{ page.bookcover.image.description | normalize_whitespace }}">
     </figure>
@@ -134,7 +134,7 @@ title-class: elementbook
 
 <!--   
   Line-by-line comments for below script:
-  1. Use liquid to pull all the testimonials from markdown file. 
+  1. Use Liquid to pull all the testimonials from markdown file. 
   2. Select one random testimonial object
   3. Pull the quote from the testimonial
   4. Assign the quote to the right html element
@@ -152,7 +152,7 @@ title-class: elementbook
   var randomSource = randomTestimonialObject.source;
   var tSourceElement = document.getElementById("tsource");
   tSourceElement.innerHTML = randomSource;
-  var randomBonaFide = randomTestimonialObject.bonafide;
+  var randomBonafide = randomTestimonialObject.bonafide;
   var tBonafideElement = document.getElementById("tbonafide");
-  tSourceElement.innerHTML = randomBonafide;
+  tBonafideElement.innerHTML = randomBonafide;
 </script>

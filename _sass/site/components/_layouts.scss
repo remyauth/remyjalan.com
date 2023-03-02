@@ -124,6 +124,19 @@
       @include grid-column(8);
     }
   }
+
+  .testimony {
+    @include grid-column(12);
+
+    @include grid-media(tablet) {
+      @include grid-column(12);
+    }
+
+    @include grid-media(desktop) {
+      @include grid-column(12);
+    }
+
+  }
 }
 
 .layout-4col {
