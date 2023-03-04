@@ -61,9 +61,25 @@
     }
 
     @include grid-media(desktop) {
-      @include grid-column-from-to(2,11);
+      // @include centerer;
+      @include grid-column-from-to(3,10);
     }
   }
+
+  .testimony {
+    @include centerer;
+    @include grid-column(12);
+
+    @include grid-media(tablet) {
+      @include grid-column(12);
+    }
+
+    @include grid-media(desktop) {
+      
+      @include grid-column-from-to(4,6);
+    }
+  }
+
 }
 
 .layout-2col_mobile {
@@ -126,14 +142,17 @@
   }
 
   .testimony {
+    
     @include grid-column(12);
 
     @include grid-media(tablet) {
-      @include grid-column(12);
+      // @include grid-column(12);
+      @include grid-column-from-to(2,11);
     }
 
     @include grid-media(desktop) {
-      @include grid-column(12);
+      // @include grid-column(12);
+      @include grid-column-from-to(2,11);
     }
 
   }
